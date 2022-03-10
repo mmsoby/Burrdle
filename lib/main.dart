@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          "Hello dudes",
+          "Hello dudses",
           style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
