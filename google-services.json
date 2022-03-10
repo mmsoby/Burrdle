@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "137802598215",
+    "project_id": "burrdle",
+    "storage_bucket": "burrdle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137802598215:android:c03501c0e7999b0edfae62",
+        "android_client_info": {
+          "package_name": "com.Firefly.Burrdle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137802598215-renf859ebnfmp4jlirqfs1elde8l18dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH1FgTD9lJcJYTdWEKTVkG3rokkWwZWdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137802598215-renf859ebnfmp4jlirqfs1elde8l18dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
