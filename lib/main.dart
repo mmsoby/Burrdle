@@ -4,6 +4,26 @@ void main() {
   runApp(MaterialApp(home: Home()));
 }
 
+
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
+
+
+
+/*
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -11,13 +31,13 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My first app'),
+        title: const Text('Burrdle'),
         centerTitle: true,
-        backgroundColor: Colors.red[600],
+        backgroundColor: Colors.Blue[600],
       ),
       body: Center(
         child: Text(
-          "Hello dudses",
+          "Hell",
           style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
@@ -33,3 +53,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+*/
