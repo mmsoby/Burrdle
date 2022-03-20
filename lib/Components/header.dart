@@ -6,14 +6,14 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Colors.blue[900], //Overrides background color of header
       automaticallyImplyLeading: false,
       centerTitle: true,
       title: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Spacer(flex: 6),
-          FlatButton(
+          TextButton(
               onPressed: () {
                 showAlertDialog(context);
               },
