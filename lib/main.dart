@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
+import 'package:burrdle/Components/header.dart';
 
 void main() {
   runApp(MaterialApp(home: Home()));
 }
-
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,13 +16,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        child: Column(
+      children: [Header()],
+    ));
   }
 }
-
-
-
-
 
 /*
 class Home extends StatelessWidget {
