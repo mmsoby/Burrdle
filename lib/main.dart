@@ -18,10 +18,17 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      appBar: Header(),
+      body: Body(),
+    );
+  }
+}
+
+/*
+Container(
         color: Colors.brown[200], //Sets background color of whole website
         child: Column(
           children: [Header(), Body(), FooterWidget()],
         ));
-  }
-}
+ */
