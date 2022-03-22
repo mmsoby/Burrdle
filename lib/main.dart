@@ -3,9 +3,30 @@ import 'dart:ui';
 import 'package:burrdle/Components/header.dart';
 import 'package:burrdle/Components/body.dart';
 import 'package:burrdle/Components/footer.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(MaterialApp(home: Home()));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Burrdle",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Home(),
+    );
+  }
 }
 
 class Home extends StatefulWidget {
