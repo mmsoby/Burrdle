@@ -5,12 +5,19 @@ import 'package:burrdle/Components/body.dart';
 import 'package:burrdle/Components/footer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  if (Firebase.apps.length == 0) {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } else {
+    Firebase.app(); // if already initialized, use that one
+  }
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
   runApp(MyApp());
 }
 
