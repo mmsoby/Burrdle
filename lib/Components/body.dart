@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
             // Title
             child: Text("BURRDLE"),
             style: TextStyle(
-                fontSize: 100.0,
+                fontSize: 50,
                 fontWeight: FontWeight.bold,
                 color: Colors.blue[900]),
           ),
