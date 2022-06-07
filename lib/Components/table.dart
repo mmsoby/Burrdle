@@ -30,7 +30,7 @@ class _DisplayTableState extends State<DisplayTable> {
               x.pos!,
               x.ht!,
               x.birthdate!,
-              x.num!
+              x.num!.toString()
             ]));
           }
 

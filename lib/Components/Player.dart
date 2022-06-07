@@ -22,8 +22,8 @@ class Player {
   final String? pos;
   final String? ht;
   final String? birthdate;
-  final String? num;
-  final String? famous;
+  final int? num;
+  final bool? famous;
 
   factory Player.fromFirestore(
     DocumentSnapshot<Map<String, dynamic>> snapshot,
