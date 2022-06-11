@@ -7,6 +7,17 @@ import 'package:flutter/foundation.dart';
 import 'package:burrdle/Components/PlayersSelected.dart';
 
 class DBConnect {
+  static Player potd = Player(
+      name: "Andy Isabella",
+      team: "Arizona Cardinals",
+      conf: "NFC",
+      div: "WEST",
+      pos: "WR",
+      ht: "5-9",
+      birthdate: "11/18/1996",
+      num: 17,
+      famous: true);
+
   static void addPlayer(String name) async {
     final ref = FirebaseFirestore.instance
         .collection("Players")

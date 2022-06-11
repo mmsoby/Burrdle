@@ -2467,22 +2467,8 @@ class _UserInputState extends State<UserInput> {
             selectedPlayer = value;
           });
 
-          //Grab data from database
-
+          //Grab data from database and add to table
           DBConnect.addPlayer(value);
-          /*
-          //Tell table we added a new player
-          Player temp = new Player(
-              name: value,
-              team: "team",
-              conf: "conf",
-              div: "west",
-              pos: "RB",
-              ht: "6-3",
-              num: "10",
-              age: "34");
-          PlayersSelected.addPlayer(temp);
-          */
         },
       ),
     );
