@@ -50,33 +50,26 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
     AlertDialog alert = AlertDialog(
       title: Text("HOW TO PLAY"),
       content: Container(
-        height: 300.0,
+        height: 200.0,
         width: 300.0,
         child: ListView(
           children: const <Widget>[
             ListTile(
               leading: Icon(Icons.stop_circle_sharp),
-              title: Text('You must guess the player of the day!'),
+              title:
+                  Text('The goal is to guess the football player of the day.'),
             ),
             ListTile(
               leading: Icon(Icons.stop_circle_sharp),
-              title: Text('You have 6 tries to determine who the player is'),
+              title: Text('You have 6 tries to determine who the player is.'),
             ),
             ListTile(
               leading: Icon(Icons.stop_circle_sharp),
-              title: Text('Ameen is king of the UFC'),
+              title: Text('Share the result with your friends.'),
             ),
             ListTile(
               leading: Icon(Icons.stop_circle_sharp),
-              title: Text('wooooooooooooooooooooooooooooooo'),
-            ),
-            ListTile(
-              leading: Icon(Icons.stop_circle_sharp),
-              title: Text('Ameen is king of the UFC'),
-            ),
-            ListTile(
-              leading: Icon(Icons.stop_circle_sharp),
-              title: Text('Ameen is king of the UFC'),
+              title: Text('Come back tomorrow for the next player.'),
             ),
           ],
         ),
