@@ -41,8 +41,8 @@ The presentation and demonstration can be viewed on my youtube channel at:
 
 ## Links
 
-Wordle: https://www.nytimes.com/games/wordle/index.html
-Poeltl: https://poeltl.dunk.town
-FlutterFire: https://firebase.flutter.dev/docs/overview
-Weddle: https://www.weddlegame.com
-News articles: https://nypost.com/2022/03/31/what-to-know-about-weddle-the-nfl-wordle-game/ 
+- Wordle: https://www.nytimes.com/games/wordle/index.html
+- Poeltl: https://poeltl.dunk.town
+- FlutterFire: https://firebase.flutter.dev/docs/overview
+- Weddle: https://www.weddlegame.com
+- News articles: https://nypost.com/2022/03/31/what-to-know-about-weddle-the-nfl-wordle-game/ 
