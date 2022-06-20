@@ -2150,8 +2150,19 @@ class DBConnect {
     "Chase Roullier",
     "Corn Elder"
   ];
+  static List resultList = [
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""]
+  ];
+
+  static bool potdSet = false;
+
   static Player potd = Player(
-      name: "Andy Isabella",
+      name: "Default Player",
       team: "Arizona Cardinals",
       conf: "NFC",
       div: "WEST",
@@ -2162,6 +2173,22 @@ class DBConnect {
       famous: true);
 
   static void addPlayer(String name) async {
+    if (!potdSet) {
+      final ref1 = FirebaseFirestore.instance
+          .collection("Players")
+          .doc("potd")
+          .withConverter(
+            fromFirestore: Player.fromFirestore,
+            toFirestore: (Player player, _) => player.toFirestore(),
+          );
+
+      final docSnap1 = await ref1.get();
+      final playerOfTheDay = docSnap1.data();
+      potd = playerOfTheDay!;
+      potdSet = true;
+    }
+
+    //Get Player from database
     final ref = FirebaseFirestore.instance
         .collection("Players")
         .doc(name)
@@ -2180,6 +2207,7 @@ class DBConnect {
       print("No such document.");
     }
 
+    //Add Player to table
     PlayersSelected.addPlayer(player!);
     //return player!;
   }

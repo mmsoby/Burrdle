@@ -21,6 +21,7 @@ class _DisplayTableState extends State<DisplayTable> {
           rows.add(buildRow(
               ["NAME", "TEAM", "CONF", "DIV", "POS", "HT", "AGE", "#"],
               isHeader: true));
+          AddColoredEmojiCallCount = 0;
           for (var i = 0; i < PlayersSelected.players.value.length; i++) {
             Player x = PlayersSelected.players.value.elementAt(i);
             rows.add(buildRow([
@@ -33,6 +34,7 @@ class _DisplayTableState extends State<DisplayTable> {
               x.birthdate!,
               x.num!.toString()
             ]));
+            if (PlayersSelected.players.value.length == 6) {}
           }
 
           return Table(
@@ -192,6 +194,28 @@ class _DisplayTableState extends State<DisplayTable> {
     return potdAge.toString();
   }
 
+  static int AddColoredEmojiCallCount = 0;
+
+  static void AddColoredEmoji(Color color) {
+    int row = (AddColoredEmojiCallCount / 8).floor();
+    int col = AddColoredEmojiCallCount % 8;
+    print("row $row : col $col");
+
+    String result;
+
+    if (color == Colors.green) {
+      result = "🟩";
+    } else if (color == Colors.yellow) {
+      result = "🟨";
+    } else {
+      result = "⬜";
+    }
+
+    DBConnect.resultList[row][col] = result;
+
+    AddColoredEmojiCallCount++;
+  }
+
   static Color DetermineStyle(text, isHeader, index) {
     var color = Colors.white;
     if (isHeader) {
@@ -243,6 +267,7 @@ class _DisplayTableState extends State<DisplayTable> {
         color = Colors.yellow;
       }
     }
+    AddColoredEmoji(color);
     return color;
   }
 }

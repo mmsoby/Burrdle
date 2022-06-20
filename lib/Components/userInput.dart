@@ -42,3 +42,25 @@ class _UserInputState extends State<UserInput> {
     );
   }
 }
+
+/*
+
+  showAlertDialog(BuildContext context) {
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Text("HOW TO PLAY"),
+      content: Container(
+          height: 200.0,
+          width: 300.0,
+          child: Text("Results:\n ${DBConnect.resultList.toString()}")),
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+ */

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:burrdle/Components/DBConnect.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   const Header({Key? key}) : super(key: key);
@@ -35,6 +37,29 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
             },
             icon: Icon(
               Icons.bar_chart,
+              color: Colors.white,
+              size: 30.0,
+            ),
+          ),
+          Spacer(flex: 1),
+          IconButton(
+            onPressed: () {
+              String copyText = "";
+
+              for (int r = 0; r < DBConnect.resultList.length; r++) {
+                for (int c = 0; c < DBConnect.resultList[0].length; c++) {
+                  copyText += DBConnect.resultList[r][c];
+                }
+                copyText += "\n";
+              }
+              copyText += "https://burrdle.web.app";
+              Clipboard.setData(new ClipboardData(text: copyText)).then((_) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Copied to your clipboard !')));
+              });
+            },
+            icon: Icon(
+              Icons.copy,
               color: Colors.white,
               size: 30.0,
             ),
@@ -99,3 +124,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+
+/*
+It still has some bugs, doesn't look too pretty, way too late to market, only works on desktop, but I finally finished working on it.
+ */
